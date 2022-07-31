@@ -16,7 +16,7 @@
           <a href="#" class="link-back">
             <img src="./assets/images/ico-back.svg" alt="뒤로가기">
           </a>
-          샐러디 xx점
+          샐러디 용인흥덕점
         </h1>
         <a href="#" class="my-orders">주문내역</a>
       </div>
@@ -72,50 +72,58 @@
             <div class="recent-menu-area scroll-x">
               <ul class="recent-menu-list">
                 <li class="recent-menu-item is-ordered">
-                  <div class="menu-img-area">
-                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
-                    <span class="badge-cart">
-                      <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
-                    </span>
-                  </div>
-                  <p class="menu-name">칠리베이컨 웜볼</p>
-                  <p class="menu-price">6,100원</p>
+                  <a href="./detail.html">
+                    <div class="menu-img-area">
+                      <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
+                    </div>
+                    <p class="menu-name">칠리베이컨 웜볼</p>
+                    <p class="menu-price">6,100원</p>
+                  </a>
+                  <a href="#" class="badge-cart">
+                    <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
+                  </a>
                 </li>
 
                 <li class="recent-menu-item">
-                  <div class="menu-img-area">
-                    <span class="badge-popular">인기</span>
-                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
-                    <span class="badge-cart">
-                      <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
-                    </span>
-                  </div>
-                  <p class="menu-name">칠리베이컨 웜볼</p>
-                  <p class="menu-price">6,100원</p>
+                  <a href="./detail.html">
+                    <div class="menu-img-area">
+                      <span class="badge-popular">인기</span>
+                      <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
+                    </div>
+                    <p class="menu-name">칠리베이컨 웜볼</p>
+                    <p class="menu-price">6,100원</p>
+                  </a>
+                  <a href="#" class="badge-cart">
+                    <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
+                  </a>
                 </li>
 
                 <li class="recent-menu-item">
-                  <div class="menu-img-area">
-                    <span class="badge-popular">인기</span>
-                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
-                    <span class="badge-cart">
-                      <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
-                    </span>
-                  </div>
-                  <p class="menu-name">칠리베이컨 웜볼</p>
-                  <p class="menu-price">6,100원</p>
+                  <a href="./detail.html">
+                    <div class="menu-img-area">
+                      <span class="badge-popular">인기</span>
+                      <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
+                    </div>
+                    <p class="menu-name">칠리베이컨 웜볼</p>
+                    <p class="menu-price">6,100원</p>
+                  </a>
+                  <a href="#" class="badge-cart">
+                    <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
+                  </a>
                 </li>
 
                 <li class="recent-menu-item">
-                  <div class="menu-img-area">
-                    <span class="badge-popular">인기</span>
-                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
-                    <span class="badge-cart">
-                      <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
-                    </span>
-                  </div>
-                  <p class="menu-name">칠리베이컨 웜볼</p>
-                  <p class="menu-price">6,100원</p>
+                  <a href="./detail.html">
+                    <div class="menu-img-area">
+                      <span class="badge-popular">인기</span>
+                      <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴사진">
+                    </div>
+                    <p class="menu-name">칠리베이컨 웜볼</p>
+                    <p class="menu-price">6,100원</p>
+                  </a>
+                  <a href="#" class="badge-cart">
+                    <img src="./assets/images/ico-cart.svg" alt="뱃지-카트" class="ico-cart">
+                  </a>
                 </li>
               </ul>
             </div>
@@ -424,25 +432,47 @@
     </div>
 
   </div>
-
-
-
   <!-- 주문정보 -->
   <div class="dimmed-layer hidden"></div>
   <div class="order-type-popup hidden">
     <p class="title">어디서 드시나요?</p>
     <div class="type-list">
-      <a href="#" class="type-item">
+      <a href="#" class="type-item" onclick="popupClose()">
         <img src="" alt="포장" class="icon">
         <p class="desc">포장해서 가져갈게요</p>
         <span class="btn-selection">선택</span>
       </a>
-      <a href="#" class="type-item">
+      <a href="#" class="type-item" onclick="popupClose()">
         <img src="" alt="매장">
         <p class="desc">매장에서 먹고 갈게요</p>
         <span class="btn-selection">선택</span>
       </a>
     </div>
   </div>
+
+
+  
+  <script>
+    window.onload = function(){
+      popupOpen ();
+    }
+    const popupOpen = () => {
+      document.querySelector('.dimmed-layer').classList.remove('hidden');
+      document.querySelector('.order-type-popup').classList.remove('hidden');
+    }
+    const popupClose = () => {
+      document.querySelector('.dimmed-layer').classList.add('hidden');
+      document.querySelector('.order-type-popup').classList.add('hidden');
+    }
+
+    // 메뉴 리스트 토글
+    const btnToggle = document.querySelectorAll('.btn-toggle');
+    const toggleMenuList = (e) => {
+      e.currentTarget.closest('.menu-list-area').classList.toggle('is-closed');
+    }
+    btnToggle.forEach(function (e) {
+      e.addEventListener('click', toggleMenuList);
+    })
+  </script>
 </body>
 </html>
